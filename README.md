@@ -10,6 +10,7 @@ The [suckless terminal (st)](https://st.suckless.org/) with some additional feat
 	+ Copy is alt-c, paste is alt-v or alt-p pastes from primary selection
 	+ Alt-l feeds all urls on screen to dmenu, so they user can choose and
 	  follow one (requires dmenu installed).
+	+ Alt-y does the same as above, but copies the url with xclip.
 	+ Zoom in/out or increase font size with Alt+Shift+k/j or u/d for larger intervals.
 	+ Hold alt and press either ↑/↓ or the vim keys k/j to move up/down in the terminal.
 	+ Shift+Mouse wheel do the same.
@@ -29,9 +30,12 @@ The following additional bindings were added before I forked this:
 ## Installation for newbs
 
 ```
-make
+git clone https://github.com/LukeSmithxyz/st
+cd st
 sudo make install
 ```
+
+Users of Arch-based distros can also install it from the AUR as [st-luke-git](https://aur.archlinux.org/packages/st-luke-git/).
 
 Obviously, `make` is required to build. `fontconfig` is required for the default build, since it asks `fontconfig` for your system monospace font.  It might be obvious, but `libX11` and `libXft` are required as well. Chances are, you have all of this installed already.
 
